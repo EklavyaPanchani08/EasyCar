@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon src/server.js",
+    "build": "babel src -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,10 @@
     "express": "^5.1.0",
     "mongoose": "^8.16.3",
     "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.0",
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0"
   }
 }
