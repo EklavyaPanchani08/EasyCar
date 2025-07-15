@@ -63,7 +63,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">info@carrental.com</span>
+                <span className="text-muted-foreground">info@EasyCar.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-primary" />
@@ -74,7 +74,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2024 CarRental. All rights reserved.</p>
+          <p>&copy; 2024 EasyCar. All rights reserved.</p>
         </div>
       </div>
     </footer>

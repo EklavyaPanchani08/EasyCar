@@ -20,7 +20,7 @@ export function Header() {
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <Car className="h-5 w-5 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold">CarRental</span>
+            <span className="text-xl font-bold">EasyCar</span>
           </a>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -55,7 +55,7 @@ export function Header() {
                     <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                       <Car className="h-5 w-5 text-primary-foreground" />
                     </div>
-                    <span className="text-xl font-bold">CarRental</span>
+                    <span className="text-xl font-bold">EasyCar</span>
                   </a>
 
                   <nav className="flex flex-col space-y-4">
