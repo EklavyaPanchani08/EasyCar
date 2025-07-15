@@ -47,24 +47,20 @@ A modern, full-stack car rental platform built with React.js & Node.js.
 
 1. **Clone the repository**
 2. **Add environment variables in both: FE & BE**
-   \`\`\`bash
-   npm install
    PORT
    MONGO_URI
    REACT_APP_API_URL
-   \`\`\`
+
 4. **Install dependencies in both: FE & BE**
-   \`\`\`bash
    npm install
-   # or
-   yarn install
-   \`\`\`
+
 5. **Start the development server for both: FE & BE**
-   \`\`\`bash
    npm run start
-   # or
-   yarn start
-   \`\`\`
 
 6. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
+
+
+## ✨ Screenshot
+
+<img width="1900" height="3284" alt="localhost_3000_ (5)" src="https://github.com/user-attachments/assets/4f73b534-4368-4858-a3dc-fd9e90cf15a8" />
