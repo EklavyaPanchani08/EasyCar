@@ -43,7 +43,8 @@ export function BookingModal({ car, open, onOpenChange }: BookingModalProps) {
   const calculateDays = () => {
     if (!bookingData.pickupDate || !bookingData.returnDate) return 0
     const diffTime = Math.abs(bookingData.returnDate.getTime() - bookingData.pickupDate.getTime())
-    return Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+    const days = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+    return days === 0 ? 1 : days
   }
 
   const calculateTotal = () => {

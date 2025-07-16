@@ -4,6 +4,7 @@ import { Card } from "../components/ui/card"
 import { Input } from "../components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select"
 import { Slider } from "../components/ui/slider"
+import { useEffect, useState } from "react"
 
 interface CarFilterType {
     resetFilters: () => void,
@@ -25,6 +26,13 @@ interface CarFilterType {
     }>>
 }
 const CarFilter = ({ resetFilters, searchTerm, setSearchTerm, filters, setFilters }: CarFilterType) => {
+    const [priceRange, setPriceRange] = useState(filters.priceRange)
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setFilters({ ...filters, priceRange })
+        }, 500)
+        return () => clearTimeout(timer)
+    }, [priceRange]);
     return (
         <div className="lg:col-span-1">
             <Card className="p-6 sticky top-24">
@@ -113,8 +121,8 @@ const CarFilter = ({ resetFilters, searchTerm, setSearchTerm, filters, setFilter
                             Price Range: ${filters.priceRange[0]} - ${filters.priceRange[1]}
                         </label>
                         <Slider
-                            value={filters.priceRange}
-                            onValueChange={(value) => setFilters({ ...filters, priceRange: value })}
+                            value={priceRange}
+                            onValueChange={(value) => setPriceRange(value)}
                             max={300}
                             min={0}
                             step={10}

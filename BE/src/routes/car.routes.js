@@ -11,15 +11,17 @@ router.get("/", async (req, res) => {
     fuel,
     search,
     transmission,
-    priceRange = [0, 200],
+    minPrice,
+    maxPrice,
     rating = 0,
   } = req.query;
+
   const filter = {
     ...(search ? { name: { $regex: search, $options: "i" } } : {}),
     ...(type && type !== "All" ? { type } : {}),
     ...(fuel && fuel !== "All" ? { fuel } : {}),
     ...(transmission && transmission !== "All" ? { transmission } : {}),
-    price: { $gte: +priceRange[0], $lte: +priceRange[1] },
+    price: { $gte: +minPrice, $lte: +maxPrice },
     rating: { $gte: +rating },
   };
   const cars = await Car.find(filter);

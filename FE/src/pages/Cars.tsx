@@ -20,7 +20,7 @@ export default function BrowseCarsPage() {
   useEffect(() => {
     const fetchCars = async () => {
       setLoading(true)
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/cars?search=${search}&cars?type=${filters.type}&fuel=${filters.fuel}&transmission=${filters.transmission}&price=${filters.priceRange}&rating=${filters.rating}`)
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/cars?search=${search}&type=${filters.type}&fuel=${filters.fuel}&transmission=${filters.transmission}&minPrice=${filters.priceRange[0]}&maxPrice=${filters.priceRange[1]}&rating=${filters.rating}`)
       const data = await response.json()
       setCars(data)
       setLoading(false)
