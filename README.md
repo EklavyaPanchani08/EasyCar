@@ -35,13 +35,59 @@ A modern, full-stack car rental platform built with React.js & Node.js.
 - Booking status management
 
 ## 🛠 Tech Stack
-- **React.js 14**
-- **TypeScript**
-- **Tailwind CSS**
-- **shadcn/ui**
-- **Node.js**
-- **Mongo DB**
-- **Mongoose**
+
+- **Frontend**: React.js, TypeScript, Tailwind CSS, shadcn/ui
+- **Backend**: Node.js, Express
+- **Database**: MongoDB with Mongoose ODM
+
+---
+
+## 📦 Database Schema
+
+### 🔹 Car Model
+```ts
+{
+  name: String,
+  brand: String,
+  type: "Sedan" | "SUV" | "Hatchback" | "Convertible" | "Coupe" | "Electric",
+  fuel: "Petrol" | "Diesel" | "Electric" | "Hybrid",
+  transmission: "Automatic" | "Manual",
+  seats: Number,
+  price: Number,
+  rating: Number,
+  reviews: Number,
+  image: String,
+  featured: Boolean
+}
+```
+
+### 🔹 Booking Model
+
+```ts
+{
+  car: ObjectId (ref: "Car"),
+  pickupDate: Date,
+  returnDate: Date,
+  pickupLocation: String,
+  firstName: String,
+  lastName: String,
+  email: String,
+  phone: String,
+  basePrice: Number,
+  tax: Number,
+  insurance: Number,
+  total: Number,
+  days: Number,
+  status: "pending" | "confirmed" | "cancelled",
+  bookingDate: Date
+}
+```
+
+---
+
+## 🤖 AI Tools - v0 for forntend component
+
+---
 
 ## 🚀 Setup Instructions
 
